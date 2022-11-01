@@ -35,7 +35,7 @@ if re.match(regex_ips,ip):
     print('Enviando info ..')
     request = json.dumps(request, indent=4)
     try:
-     r = requests.get(url, json=request)
+     r = requests.post(url, json=request)
     except requests.exceptions.RequestException as e:
        print('No se puedo establecer la conexión..')
        for i in range(3):

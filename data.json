@@ -1,0 +1,77 @@
+{
+    "nmap": {
+        "command_line": "nmap -oX - -p 22-53 -Pn -sV -A 192.168.0.1",
+        "scaninfo": {
+            "error": [
+                "NSOCK ERROR [0.2710s] ssl_init_helper(): OpenSSL legacy provider failed to load.\r\n\r\n"
+            ],
+            "tcp": {
+                "method": "syn",
+                "services": "22-53"
+            }
+        },
+        "scanstats": {
+            "timestr": "Tue Nov  1 19:21:48 2022",
+            "elapsed": "7.57",
+            "uphosts": "1",
+            "downhosts": "0",
+            "totalhosts": "1"
+        }
+    },
+    "scan": {
+        "192.168.0.1": {
+            "hostnames": [
+                {
+                    "name": "",
+                    "type": ""
+                }
+            ],
+            "addresses": {
+                "ipv4": "192.168.0.1",
+                "mac": "20:E5:64:E1:0C:1A"
+            },
+            "vendor": {
+                "20:E5:64:E1:0C:1A": "Arris Group"
+            },
+            "status": {
+                "state": "up",
+                "reason": "arp-response"
+            },
+            "tcp": {
+                "22": {
+                    "state": "filtered",
+                    "reason": "no-response",
+                    "name": "ssh",
+                    "product": "",
+                    "version": "",
+                    "extrainfo": "",
+                    "conf": "3",
+                    "cpe": ""
+                },
+                "23": {
+                    "state": "filtered",
+                    "reason": "no-response",
+                    "name": "telnet",
+                    "product": "",
+                    "version": "",
+                    "extrainfo": "",
+                    "conf": "3",
+                    "cpe": ""
+                }
+            },
+            "portused": [
+                {
+                    "state": "closed",
+                    "proto": "tcp",
+                    "portid": "24"
+                },
+                {
+                    "state": "closed",
+                    "proto": "udp",
+                    "portid": "42534"
+                }
+            ],
+            "osmatch": []
+        }
+    }
+}
